@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Form">
+  <grid id="27dc6" binding="rootPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <maximumSize width="100" height="200"/>
+      <minimumSize width="100" height="200"/>
+      <preferredSize width="100" height="200"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="64267" binding="mainPanel" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="North"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="2cb91" class="javax.swing.JButton" binding="startButon">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="100" height="50"/>
+                <preferred-size width="100" height="50"/>
+                <maximum-size width="100" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="START"/>
+            </properties>
+          </component>
+          <component id="a9edb" class="javax.swing.JTextField" binding="urlField">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="10" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="http://petrushin.ru/"/>
+            </properties>
+          </component>
+          <grid id="1f40c" binding="filePanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="a008f" class="javax.swing.JButton" binding="chooserButton">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <label value="Путь"/>
+                  <text value="Путь"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <component id="5fc81" class="javax.swing.JTextField" binding="pathField">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="D:\Materials"/>
+            </properties>
+          </component>
+          <component id="3468a" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="ВВЕДИТЕ URL САЙТА"/>
+            </properties>
+          </component>
+          <component id="29d5a" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="ВВЕДИТЕ ИЛИ ВЫБЕРИТЕ ПУТЬ"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="bcfac" binding="soughtPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints border-constraint="South"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="19771" class="javax.swing.JButton" binding="pauseButton">
+            <constraints/>
+            <properties>
+              <enabled value="false"/>
+              <maximumSize width="100" height="50"/>
+              <minimumSize width="100" height="50"/>
+              <preferredSize width="100" height="50"/>
+              <text value="PAUSE"/>
+            </properties>
+          </component>
+          <component id="74f6a" class="javax.swing.JButton" binding="stopButton">
+            <constraints/>
+            <properties>
+              <enabled value="false"/>
+              <maximumSize width="100" height="50"/>
+              <minimumSize width="100" height="50"/>
+              <preferredSize width="100" height="50"/>
+              <text value="STOP"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="86cd7" binding="animePanel" layout-manager="FlowLayout" hgap="10" vgap="5" flow-align="1">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <minimumSize width="310" height="310"/>
+          <preferredSize width="310" height="310"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="51f57" binding="visitPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints/>
+            <properties>
+              <minimumSize width="110" height="100"/>
+              <preferredSize width="110" height="100"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="377a4" class="javax.swing.JLabel">
+                <constraints border-constraint="North"/>
+                <properties>
+                  <text value="Сайтов посещено"/>
+                </properties>
+              </component>
+              <component id="21aef" class="javax.swing.JLabel" binding="visitLabel">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <text value="0"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="28d71" binding="sitePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints/>
+            <properties>
+              <minimumSize width="110" height="100"/>
+              <preferredSize width="110" height="100"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="77725" class="javax.swing.JLabel">
+                <constraints border-constraint="North"/>
+                <properties>
+                  <text value="Сайтов написано"/>
+                </properties>
+              </component>
+              <component id="a224a" class="javax.swing.JLabel" binding="writeLabel">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <text value="0"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="88a9b" binding="tinePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints/>
+            <properties>
+              <minimumSize width="110" height="100"/>
+              <preferredSize width="110" height="100"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="82f95" class="javax.swing.JLabel">
+                <constraints border-constraint="North"/>
+                <properties>
+                  <text value="Прошло времени"/>
+                </properties>
+              </component>
+              <component id="ef87d" class="javax.swing.JLabel" binding="timeLabel">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <maximumSize width="3" height="3"/>
+                  <minimumSize width="3" height="3"/>
+                  <preferredSize width="3" height="3"/>
+                  <text value="00:00"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
