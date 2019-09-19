@@ -4,8 +4,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import javax.swing.*;
-import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.concurrent.*;
 
 
 public class Observer extends Thread {
@@ -13,7 +13,7 @@ public class Observer extends Thread {
     private JTextField urlField;
     private final String primeUrl;
     private ArrayList<String> total;
-    private ArrayDeque<String> toSave;
+    private BlockingQueue<String> toSave;
     private boolean finish;
     private static boolean mustSleep;
     private StringBuilder space;
@@ -27,14 +27,14 @@ public class Observer extends Thread {
         this.form = form;
         this.urlField = form.getUrlField();
         primeUrl = urlField.getText();
-        toSave = new ArrayDeque<>();
+        toSave = new LinkedBlockingDeque<>();
         total = new ArrayList<>();
         space = new StringBuilder("   ");
 
     }
 
-    public String getNextAdress() {
-        return toSave.poll();
+    public String getNextAdress() throws InterruptedException {
+        return toSave.take();
     }
 
     public Boolean hasAnyAdress() {
@@ -83,7 +83,7 @@ public class Observer extends Thread {
         }
 
         System.out.println(space + "--->" + urlPath);
-        toSave.addLast(space + "--->" + urlPath);
+        toSave.add(space + "--->" + urlPath);
         space.append("   ");
         Elements links = doc.select("a[href]");
         for (Element element : links) {
@@ -95,18 +95,25 @@ public class Observer extends Thread {
             } catch (InterruptedException e) {
                 return;
             }
-            if (finish) return;
+            if (finish) {
+                return;
+            }
             String link = element.attr("href");
-            if (link.contains("#") || link.equals("/")) continue;
+
+            if (link.contains("#") || link.equals("/")) {
+                continue;
+            }
 
             System.out.println(space + link);
 
             if (!link.contains(":") && !link.contains("http")) {
-                toSave.addLast(space + urlPath + link);
+                toSave.add(space + urlPath + link);
             } else {
-                toSave.addLast(space + link);
+                toSave.add(space + link);
             }
-            if (total.contains(link) || urlPath.contains(".html")) continue;
+            if (total.contains(link) || urlPath.contains(".html")) {
+                continue;
+            }
 
             total.add(link);
 
