@@ -42,6 +42,18 @@ public class Form {
         this.filePanel = filePanel;
     }
 
+    public void stop (){
+        obs.setFinished(true);
+        obs.interrupt();
+        saver.interrupt();
+        timer.interrupt();
+        pathField.setEditable(true);
+        urlField.setEditable(true);
+        startButon.setEnabled(true);
+        pauseButton.setEnabled(false);
+        stopButton.setEnabled(false);
+    }
+
 
     public Form() {
         Form form = this;
@@ -128,4 +140,5 @@ public class Form {
     public void setWriteLabel(String str) {
         writeLabel.setText(str);
     }
+
 }

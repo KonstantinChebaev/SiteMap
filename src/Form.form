@@ -36,7 +36,7 @@
               </grid>
             </constraints>
             <properties>
-              <text value="http://petrushin.ru/"/>
+              <text value="http://nadezhkin-ilya.ru/"/>
             </properties>
           </component>
           <grid id="1f40c" binding="filePanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">

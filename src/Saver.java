@@ -1,6 +1,9 @@
+import javax.swing.*;
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.LinkedList;
+import java.util.concurrent.BlockingQueue;
 
 public class Saver extends Thread {
     private String path;
@@ -8,6 +11,7 @@ public class Saver extends Thread {
     private Observer obs;
     private int totalCount;
     private Form form;
+    private BlockingQueue<String> toSave;
 
     public Saver(Observer obs, String path, String fileName, Form form) {
         this.path = path;
@@ -15,11 +19,16 @@ public class Saver extends Thread {
         this.obs = obs;
         totalCount = 0;
         this.form = form;
+        try {
+            toSave = obs.getToSaveList();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            return;
+        }
     }
 
     @Override
     public void run() {
-        super.run();
         Path pathMaster = Paths.get(path, fileName);
         File file = pathMaster.toFile();
         try {
@@ -27,22 +36,30 @@ public class Saver extends Thread {
                 file.createNewFile();
             }
             try (BufferedWriter out = new BufferedWriter(new FileWriter(file.getAbsoluteFile(), true))) {
-                while (!obs.isFinished()) {
+                while (!(Thread.currentThread().isInterrupted())) {
                     try {
-                        sleep(10);
-                        while (Observer.isMustSleep()) {
-                            sleep(10);
-                        }
-                        if (obs.hasAnyAdress()) {
-                            out.write(obs.getNextAdress());
-                            out.newLine();
-                            totalCount++;
+                        final String nextLine = toSave.take();
+                        out.write(nextLine);
+                        out.newLine();
+                        totalCount++;
+                        SwingUtilities.invokeLater(() -> {
                             form.setWriteLabel(Integer.toString(totalCount));
-                        }
+                        });
                     } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
                         return;
                     }
 
+                }
+                final LinkedList <String> remainingObjects = new LinkedList<>();
+                toSave.drainTo(remainingObjects);
+                for(String nextLine : remainingObjects) {
+                    out.write(nextLine);
+                    out.newLine();
+                    totalCount++;
+                    SwingUtilities.invokeLater(() -> {
+                        form.setWriteLabel(Integer.toString(totalCount));
+                    });
                 }
             }
         } catch (IOException e) {

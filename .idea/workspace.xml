@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea6dadce-89e2-4f36-9a15-2d742c956a51" name="Default Changelist" comment="" />
+    <list default="true" id="ea6dadce-89e2-4f36-9a15-2d742c956a51" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SiteMap/Form$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SiteMap/Form$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SiteMap/Form$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SiteMap/Form$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SiteMap/Form$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SiteMap/Form$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SiteMap/Form$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SiteMap/Form$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SiteMap/Form.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SiteMap/Form.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SiteMap/Loader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SiteMap/Loader$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SiteMap/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SiteMap/Loader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SiteMap/MapBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SiteMap/Observer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SiteMap/Observer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SiteMap/Saver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SiteMap/Saver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SiteMap/Timer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SiteMap/Timer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Saver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Timer.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,14 +38,22 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
   <component name="ProjectId" id="1QjvcJ7NBhm04zx9TOXzVQ9qNzJ" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="269" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last.edited.regexp" value="/..hbj" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StopWatch" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../убейте меня/SiteMap" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -73,25 +101,75 @@
       <updated>1563399127081</updated>
       <workItem from="1568296908533" duration="4181000" />
       <workItem from="1568301817326" duration="68000" />
+      <workItem from="1568308461968" duration="433000" />
+      <workItem from="1568309052891" duration="271000" />
+      <workItem from="1568593724462" duration="696000" />
+      <workItem from="1568594995499" duration="71000" />
+      <workItem from="1568652162144" duration="6989000" />
+      <workItem from="1568815212679" duration="602000" />
+      <workItem from="1568839098719" duration="64000" />
+      <workItem from="1568902966669" duration="1537000" />
+      <workItem from="1569253702116" duration="1344000" />
+      <workItem from="1570302252322" duration="3203000" />
+      <workItem from="1570351796008" duration="6559000" />
+      <workItem from="1571430825005" duration="1577000" />
+      <workItem from="1571433143232" duration="204000" />
+      <workItem from="1572199381033" duration="2251000" />
+      <workItem from="1572546697458" duration="29000" />
+      <workItem from="1573322473314" duration="2000000" />
+      <workItem from="1577623397082" duration="1489000" />
+      <workItem from="1577735302510" duration="606000" />
+      <workItem from="1577738639814" duration="214000" />
+      <workItem from="1577783684919" duration="2891000" />
+      <workItem from="1577790124955" duration="29000" />
+      <workItem from="1577790835670" duration="127000" />
+      <workItem from="1577798361284" duration="10479000" />
+      <workItem from="1578229597268" duration="604000" />
+      <workItem from="1578232691525" duration="14046000" />
     </task>
+    <task id="LOCAL-00001" summary="Little better">
+      <created>1568903363186</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568903363187</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Little better" />
+    <option name="LAST_COMMIT_MESSAGE" value="Little better" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

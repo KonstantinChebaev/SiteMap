@@ -6,6 +6,8 @@ public class Timer extends Thread {
     private long currMilis;
     private Observer obs;
     private long millis;
+    private int sec;
+    private int min;
 
     public Timer(JLabel timeLabel, Observer obs) {
         this.timeLabel = timeLabel;
@@ -13,6 +15,8 @@ public class Timer extends Thread {
         currMilis = startMilis;
         this.obs = obs;
         millis = 0L;
+        sec = 0;
+        min = 0;
     }
 
     @Override
@@ -26,13 +30,17 @@ public class Timer extends Thread {
                     sleep(10);
                 }
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
                 return;
             }
             currMilis = System.currentTimeMillis();
             millis += currMilis - startMilis;
             startMilis = currMilis;
+            min = (int)millis / 1000 / 60;
+            sec =  (int)millis / 1000 % 1000 - min*60;
+
             SwingUtilities.invokeLater(() -> {
-                timeLabel.setText(String.format("%d:%02d", millis / 1000 / 60, millis / 1000 % 1000));
+                timeLabel.setText(String.format("%d:%02d", min, sec));
             });
 
         }
