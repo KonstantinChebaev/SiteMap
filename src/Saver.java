@@ -36,7 +36,7 @@ public class Saver extends Thread {
                 file.createNewFile();
             }
             try (BufferedWriter out = new BufferedWriter(new FileWriter(file.getAbsoluteFile(), true))) {
-                while (!(Thread.currentThread().isInterrupted())) {
+                while (!(Thread.currentThread().isInterrupted())|| toSave.size() > 0) {
                     try {
                         final String nextLine = toSave.take();
                         out.write(nextLine);
@@ -49,17 +49,6 @@ public class Saver extends Thread {
                         Thread.currentThread().interrupt();
                         return;
                     }
-
-                }
-                final LinkedList <String> remainingObjects = new LinkedList<>();
-                toSave.drainTo(remainingObjects);
-                for(String nextLine : remainingObjects) {
-                    out.write(nextLine);
-                    out.newLine();
-                    totalCount++;
-                    SwingUtilities.invokeLater(() -> {
-                        form.setWriteLabel(Integer.toString(totalCount));
-                    });
                 }
             }
         } catch (IOException e) {
